@@ -1,7 +1,7 @@
-# Imagen base de Java 11
+# Java 11 base image
 FROM openjdk:11-jdk-slim-bullseye
 
-# Instalar librerías de GTK+
+# Install GTK+ libraries
 RUN apt-get update && apt-get install -y \
     libx11-dev \
     libxext-dev \
@@ -12,11 +12,11 @@ RUN apt-get update && apt-get install -y \
 
 ENV LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:/usr/local/openjdk-11/lib
 
-# Directorio de trabajo
+# working directory
 WORKDIR /app
 
-# Copiar archivo .jar de la aplicación
+# Copy application .jar file
 COPY target/TicTacToe-1.1.0.jar .
 
-# Ejecutar la aplicación
+# run the app
 CMD ["java", "-jar", "TicTacToe-1.1.0.jar"]
