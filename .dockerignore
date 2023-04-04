@@ -1,0 +1,9 @@
+Dockerfile*
+.git
+.gitignore
+*.md
+*.txt
+*.yaml
+*.yml
+*.tar.gz
+Makefile
