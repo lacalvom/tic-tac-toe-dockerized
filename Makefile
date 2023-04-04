@@ -1,4 +1,4 @@
-USER=lacalvom
+USER=<docker-hub-username>
 IMAGE=tic-tac-toe:latest
 # DISPLAY=:1
 
